@@ -1,0 +1,346 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio | Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0b0b14;
+    color: #fff;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(11,11,20,0.9);
+    backdrop-filter: blur(12px);
+    z-index: 100;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    color: #8b5cf6;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 14px;
+    transition: .3s;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+section {
+    padding: 100px 8%;
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.hero h3 {
+    font-size: 22px;
+    color: #a78bfa;
+}
+
+.hero h1 {
+    font-size: clamp(40px, 6vw, 65px);
+    margin: 15px 0;
+    line-height: 1.2;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #8b5cf6;
+}
+
+.hero p {
+    margin: 20px 0;
+    color: #aaa;
+    line-height: 1.8;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #8b5cf6;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    margin-top: 15px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #6d28d9;
+    transform: translateY(-4px);
+}
+
+.hero-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid #8b5cf6;
+    box-shadow: 0 0 50px #8b5cf655;
+    object-fit: cover;
+}
+
+.heading {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 50px;
+}
+
+.heading span {
+    color: #a78bfa;
+}
+
+.about {
+    background: #11111d;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: auto;
+    color: #aaa;
+    line-height: 2;
+}
+
+.skills-container,
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.skill, .project {
+    padding: 25px;
+    background: #171727;
+    border: 1px solid #292942;
+    border-radius: 15px;
+    text-align: center;
+    transition: .3s;
+}
+
+.skill:hover, .project:hover {
+    transform: translateY(-8px);
+    border-color: #8b5cf6;
+    box-shadow: 0 0 20px #8b5cf633;
+}
+
+.skill h3 {
+    color: #a78bfa;
+}
+
+.project p {
+    color: #aaa;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.project a {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+.contact {
+    background: #11111d;
+    text-align: center;
+}
+
+.contact p {
+    color: #aaa;
+    margin: 15px;
+}
+
+.contact a {
+    color: #a78bfa;
+    text-decoration: none;
+}
+
+footer {
+    padding: 25px;
+    text-align: center;
+    color: #777;
+    background: #080810;
+}
+
+@media(max-width: 768px) {
+    header {
+        padding: 15px 5%;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 11px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding-top: 130px;
+    }
+
+    .hero-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    section {
+        padding: 80px 6%;
+    }
+}
+
+@media(max-width: 420px) {
+    nav a {
+        margin-left: 6px;
+        font-size: 10px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">MyPortfolio.</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h3>Hello, I'm</h3>
+        <h1>Your Name</h1>
+        <h2>Web Developer</h2>
+        <p>
+            I am a passionate developer who loves creating
+            beautiful, responsive and user-friendly websites.
+            Welcome to my personal portfolio!
+        </p>
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+    <img class="hero-image"
+    src="https://placehold.co/400x400/171727/a78bfa?text=Your+Photo"
+    alt="Profile photo">
+</section>
+
+<section class="about" id="about">
+    <h2 class="heading">About <span>Me</span></h2>
+    <p>
+        Hi! I'm Your Name. I enjoy learning new technologies
+        and building creative digital experiences.
+        My goal is to become a skilled software developer
+        and create projects that solve real-world problems.
+    </p>
+</section>
+
+<section id="skills">
+    <h2 class="heading">My <span>Skills</span></h2>
+
+    <div class="skills-container">
+        <div class="skill"><h3>HTML5</h3></div>
+        <div class="skill"><h3>CSS3</h3></div>
+        <div class="skill"><h3>JavaScript</h3></div>
+        <div class="skill"><h3>Python</h3></div>
+        <div class="skill"><h3>React</h3></div>
+        <div class="skill"><h3>Git & GitHub</h3></div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="projects-container">
+
+        <div class="project">
+            <h3>Portfolio Website</h3>
+            <p>A responsive personal portfolio website.</p>
+            <a href="https://github.com/yourusername"
+               target="_blank" rel="noopener">View Project →</a>
+        </div>
+
+        <div class="project">
+            <h3>Calculator App</h3>
+            <p>A simple calculator built using JavaScript.</p>
+            <a href="https://github.com/yourusername"
+               target="_blank" rel="noopener">View Project →</a>
+        </div>
+
+        <div class="project">
+            <h3>Weather App</h3>
+            <p>A weather application with a clean interface.</p>
+            <a href="https://github.com/yourusername"
+               target="_blank" rel="noopener">View Project →</a>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact" id="contact">
+    <h2 class="heading">Contact <span>Me</span></h2>
+
+    <p>Email: <a href="mailto:yourmail@gmail.com">
+        yourmail@gmail.com</a></p>
+
+    <p>GitHub: <a href="https://github.com/yourusername"
+       target="_blank" rel="noopener">GitHub Profile</a></p>
+
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourusername"
+       target="_blank" rel="noopener">LinkedIn Profile</a></p>
+
+    <a href="mailto:yourmail@gmail.com" class="btn">
+        Send Message
+    </a>
+</section>
+
+<footer>
+    <p>© 2026 Your Name | All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
